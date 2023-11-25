@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblib.a CMakeFiles/lib.dir/class/socket/Socket.cpp.o CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o CMakeFiles/lib.dir/class/user/User.cpp.o
+/usr/bin/ranlib liblib.a
