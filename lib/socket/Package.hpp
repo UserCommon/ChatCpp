@@ -7,6 +7,8 @@
 template <typename T>
 class Package {
   public:
+    virtual void writeTo(int fd);
+    // readFrom
     uint32_t size;
 
     Package(T &&data, uint32_t size);
@@ -15,8 +17,8 @@ class Package {
     T getData();
     uint32_t getSize();
 
-  private:
-    T &&m_data;
+  protected:
+    T m_data; // T&&?
 };
 
 #endif

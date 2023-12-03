@@ -1,3 +1,5 @@
+#include "lib/socket/Message.hpp"
+#include "lib/socket/TCPSocket.hpp"
 #include <iostream>
 
 int main() {

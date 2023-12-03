@@ -155,29 +155,77 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-class/socket/Socket.o: class/socket/Socket.cpp.o
-.PHONY : class/socket/Socket.o
+class/command/Command.o: class/command/Command.cpp.o
+.PHONY : class/command/Command.o
 
 # target to build an object file
-class/socket/Socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Socket.cpp.o
-.PHONY : class/socket/Socket.cpp.o
+class/command/Command.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.o
+.PHONY : class/command/Command.cpp.o
 
-class/socket/Socket.i: class/socket/Socket.cpp.i
-.PHONY : class/socket/Socket.i
+class/command/Command.i: class/command/Command.cpp.i
+.PHONY : class/command/Command.i
 
 # target to preprocess a source file
-class/socket/Socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Socket.cpp.i
-.PHONY : class/socket/Socket.cpp.i
+class/command/Command.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.i
+.PHONY : class/command/Command.cpp.i
 
-class/socket/Socket.s: class/socket/Socket.cpp.s
-.PHONY : class/socket/Socket.s
+class/command/Command.s: class/command/Command.cpp.s
+.PHONY : class/command/Command.s
 
 # target to generate assembly for a file
-class/socket/Socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Socket.cpp.s
-.PHONY : class/socket/Socket.cpp.s
+class/command/Command.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.s
+.PHONY : class/command/Command.cpp.s
+
+class/socket/Package.o: class/socket/Package.cpp.o
+.PHONY : class/socket/Package.o
+
+# target to build an object file
+class/socket/Package.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.o
+.PHONY : class/socket/Package.cpp.o
+
+class/socket/Package.i: class/socket/Package.cpp.i
+.PHONY : class/socket/Package.i
+
+# target to preprocess a source file
+class/socket/Package.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.i
+.PHONY : class/socket/Package.cpp.i
+
+class/socket/Package.s: class/socket/Package.cpp.s
+.PHONY : class/socket/Package.s
+
+# target to generate assembly for a file
+class/socket/Package.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.s
+.PHONY : class/socket/Package.cpp.s
+
+class/socket/TCPSocket.o: class/socket/TCPSocket.cpp.o
+.PHONY : class/socket/TCPSocket.o
+
+# target to build an object file
+class/socket/TCPSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o
+.PHONY : class/socket/TCPSocket.cpp.o
+
+class/socket/TCPSocket.i: class/socket/TCPSocket.cpp.i
+.PHONY : class/socket/TCPSocket.i
+
+# target to preprocess a source file
+class/socket/TCPSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.i
+.PHONY : class/socket/TCPSocket.cpp.i
+
+class/socket/TCPSocket.s: class/socket/TCPSocket.cpp.s
+.PHONY : class/socket/TCPSocket.s
+
+# target to generate assembly for a file
+class/socket/TCPSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.s
+.PHONY : class/socket/TCPSocket.cpp.s
 
 class/thread_pool/ThreadPool.o: class/thread_pool/ThreadPool.cpp.o
 .PHONY : class/thread_pool/ThreadPool.o
@@ -286,9 +334,15 @@ help:
 	@echo "... client"
 	@echo "... lib"
 	@echo "... server"
-	@echo "... class/socket/Socket.o"
-	@echo "... class/socket/Socket.i"
-	@echo "... class/socket/Socket.s"
+	@echo "... class/command/Command.o"
+	@echo "... class/command/Command.i"
+	@echo "... class/command/Command.s"
+	@echo "... class/socket/Package.o"
+	@echo "... class/socket/Package.i"
+	@echo "... class/socket/Package.s"
+	@echo "... class/socket/TCPSocket.o"
+	@echo "... class/socket/TCPSocket.i"
+	@echo "... class/socket/TCPSocket.s"
 	@echo "... class/thread_pool/ThreadPool.o"
 	@echo "... class/thread_pool/ThreadPool.i"
 	@echo "... class/thread_pool/ThreadPool.s"

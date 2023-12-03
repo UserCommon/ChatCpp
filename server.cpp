@@ -1,6 +1,7 @@
+#include "lib/Backend.hpp"
 #include <iostream>
 
 int main() {
-    std::cout << "Hey!" << std::endl;
+    Backend::start();
     return 0;
 }

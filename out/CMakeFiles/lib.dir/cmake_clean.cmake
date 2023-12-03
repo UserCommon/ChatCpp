@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/lib.dir/class/socket/Socket.cpp.o"
-  "CMakeFiles/lib.dir/class/socket/Socket.cpp.o.d"
+  "CMakeFiles/lib.dir/class/command/Command.cpp.o"
+  "CMakeFiles/lib.dir/class/command/Command.cpp.o.d"
+  "CMakeFiles/lib.dir/class/socket/Package.cpp.o"
+  "CMakeFiles/lib.dir/class/socket/Package.cpp.o.d"
+  "CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o"
+  "CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o.d"
   "CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o"
   "CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o.d"
   "CMakeFiles/lib.dir/class/user/User.cpp.o"
