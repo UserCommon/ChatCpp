@@ -2,7 +2,7 @@
 #include <utility>
 
 template <typename T>
-Package<T>::Package(T &&data, uint32_t size) : m_data(data), size(size) {}
+Package<T>::Package(T data, uint32_t size) : m_data(data), size(size) {}
 
 template <typename T>
 Package<T>::Package() {

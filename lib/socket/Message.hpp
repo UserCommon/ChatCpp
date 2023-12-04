@@ -7,8 +7,8 @@
 class Message : public Package<std::string> {
   public:
     Message();
-    Message(std::string &&sender, std::string &&message);
-    Message(std::string &&sender, std::string &&message, uint32_t size);
+    Message(std::string sender, std::string message);
+    Message(std::string sender, std::string message, uint32_t size);
     std::string getSender();
     void writeTo(int fd);
     static Message readFrom(int fd);

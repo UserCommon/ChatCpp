@@ -1,4 +1,5 @@
 #include "TCPSocket.hpp"
+#include "Message.hpp"
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
@@ -24,6 +25,9 @@ bool TCPSocket::connect(const std::string &address, int port) {
     }
     return true;
 }
+
+void TCPSocket::sendMessage(Message m) { m.writeTo(socket_fd); }
+Message TCPSocket::recvMessage() { return Message::readFrom(socket_fd); }
 
 void TCPServer::bind(const std::string &adress, int port) {
     sockaddr_in serv_addr, client_addr;

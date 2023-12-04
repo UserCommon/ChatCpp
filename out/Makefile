@@ -155,126 +155,6 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
 .PHONY : client/fast
 
-class/command/Command.o: class/command/Command.cpp.o
-.PHONY : class/command/Command.o
-
-# target to build an object file
-class/command/Command.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.o
-.PHONY : class/command/Command.cpp.o
-
-class/command/Command.i: class/command/Command.cpp.i
-.PHONY : class/command/Command.i
-
-# target to preprocess a source file
-class/command/Command.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.i
-.PHONY : class/command/Command.cpp.i
-
-class/command/Command.s: class/command/Command.cpp.s
-.PHONY : class/command/Command.s
-
-# target to generate assembly for a file
-class/command/Command.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/command/Command.cpp.s
-.PHONY : class/command/Command.cpp.s
-
-class/socket/Package.o: class/socket/Package.cpp.o
-.PHONY : class/socket/Package.o
-
-# target to build an object file
-class/socket/Package.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.o
-.PHONY : class/socket/Package.cpp.o
-
-class/socket/Package.i: class/socket/Package.cpp.i
-.PHONY : class/socket/Package.i
-
-# target to preprocess a source file
-class/socket/Package.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.i
-.PHONY : class/socket/Package.cpp.i
-
-class/socket/Package.s: class/socket/Package.cpp.s
-.PHONY : class/socket/Package.s
-
-# target to generate assembly for a file
-class/socket/Package.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/Package.cpp.s
-.PHONY : class/socket/Package.cpp.s
-
-class/socket/TCPSocket.o: class/socket/TCPSocket.cpp.o
-.PHONY : class/socket/TCPSocket.o
-
-# target to build an object file
-class/socket/TCPSocket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o
-.PHONY : class/socket/TCPSocket.cpp.o
-
-class/socket/TCPSocket.i: class/socket/TCPSocket.cpp.i
-.PHONY : class/socket/TCPSocket.i
-
-# target to preprocess a source file
-class/socket/TCPSocket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.i
-.PHONY : class/socket/TCPSocket.cpp.i
-
-class/socket/TCPSocket.s: class/socket/TCPSocket.cpp.s
-.PHONY : class/socket/TCPSocket.s
-
-# target to generate assembly for a file
-class/socket/TCPSocket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.s
-.PHONY : class/socket/TCPSocket.cpp.s
-
-class/thread_pool/ThreadPool.o: class/thread_pool/ThreadPool.cpp.o
-.PHONY : class/thread_pool/ThreadPool.o
-
-# target to build an object file
-class/thread_pool/ThreadPool.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o
-.PHONY : class/thread_pool/ThreadPool.cpp.o
-
-class/thread_pool/ThreadPool.i: class/thread_pool/ThreadPool.cpp.i
-.PHONY : class/thread_pool/ThreadPool.i
-
-# target to preprocess a source file
-class/thread_pool/ThreadPool.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.i
-.PHONY : class/thread_pool/ThreadPool.cpp.i
-
-class/thread_pool/ThreadPool.s: class/thread_pool/ThreadPool.cpp.s
-.PHONY : class/thread_pool/ThreadPool.s
-
-# target to generate assembly for a file
-class/thread_pool/ThreadPool.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.s
-.PHONY : class/thread_pool/ThreadPool.cpp.s
-
-class/user/User.o: class/user/User.cpp.o
-.PHONY : class/user/User.o
-
-# target to build an object file
-class/user/User.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/user/User.cpp.o
-.PHONY : class/user/User.cpp.o
-
-class/user/User.i: class/user/User.cpp.i
-.PHONY : class/user/User.i
-
-# target to preprocess a source file
-class/user/User.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/user/User.cpp.i
-.PHONY : class/user/User.cpp.i
-
-class/user/User.s: class/user/User.cpp.s
-.PHONY : class/user/User.s
-
-# target to generate assembly for a file
-class/user/User.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/class/user/User.cpp.s
-.PHONY : class/user/User.cpp.s
-
 client.o: client.cpp.o
 .PHONY : client.o
 
@@ -298,6 +178,198 @@ client.s: client.cpp.s
 client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.s
 .PHONY : client.cpp.s
+
+lib/Backend.o: lib/Backend.cpp.o
+.PHONY : lib/Backend.o
+
+# target to build an object file
+lib/Backend.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/Backend.cpp.o
+.PHONY : lib/Backend.cpp.o
+
+lib/Backend.i: lib/Backend.cpp.i
+.PHONY : lib/Backend.i
+
+# target to preprocess a source file
+lib/Backend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/Backend.cpp.i
+.PHONY : lib/Backend.cpp.i
+
+lib/Backend.s: lib/Backend.cpp.s
+.PHONY : lib/Backend.s
+
+# target to generate assembly for a file
+lib/Backend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/Backend.cpp.s
+.PHONY : lib/Backend.cpp.s
+
+lib/command/Command.o: lib/command/Command.cpp.o
+.PHONY : lib/command/Command.o
+
+# target to build an object file
+lib/command/Command.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/command/Command.cpp.o
+.PHONY : lib/command/Command.cpp.o
+
+lib/command/Command.i: lib/command/Command.cpp.i
+.PHONY : lib/command/Command.i
+
+# target to preprocess a source file
+lib/command/Command.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/command/Command.cpp.i
+.PHONY : lib/command/Command.cpp.i
+
+lib/command/Command.s: lib/command/Command.cpp.s
+.PHONY : lib/command/Command.s
+
+# target to generate assembly for a file
+lib/command/Command.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/command/Command.cpp.s
+.PHONY : lib/command/Command.cpp.s
+
+lib/socket/Message.o: lib/socket/Message.cpp.o
+.PHONY : lib/socket/Message.o
+
+# target to build an object file
+lib/socket/Message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Message.cpp.o
+.PHONY : lib/socket/Message.cpp.o
+
+lib/socket/Message.i: lib/socket/Message.cpp.i
+.PHONY : lib/socket/Message.i
+
+# target to preprocess a source file
+lib/socket/Message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Message.cpp.i
+.PHONY : lib/socket/Message.cpp.i
+
+lib/socket/Message.s: lib/socket/Message.cpp.s
+.PHONY : lib/socket/Message.s
+
+# target to generate assembly for a file
+lib/socket/Message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Message.cpp.s
+.PHONY : lib/socket/Message.cpp.s
+
+lib/socket/Package.o: lib/socket/Package.cpp.o
+.PHONY : lib/socket/Package.o
+
+# target to build an object file
+lib/socket/Package.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Package.cpp.o
+.PHONY : lib/socket/Package.cpp.o
+
+lib/socket/Package.i: lib/socket/Package.cpp.i
+.PHONY : lib/socket/Package.i
+
+# target to preprocess a source file
+lib/socket/Package.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Package.cpp.i
+.PHONY : lib/socket/Package.cpp.i
+
+lib/socket/Package.s: lib/socket/Package.cpp.s
+.PHONY : lib/socket/Package.s
+
+# target to generate assembly for a file
+lib/socket/Package.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/Package.cpp.s
+.PHONY : lib/socket/Package.cpp.s
+
+lib/socket/TCPSocket.o: lib/socket/TCPSocket.cpp.o
+.PHONY : lib/socket/TCPSocket.o
+
+# target to build an object file
+lib/socket/TCPSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o
+.PHONY : lib/socket/TCPSocket.cpp.o
+
+lib/socket/TCPSocket.i: lib/socket/TCPSocket.cpp.i
+.PHONY : lib/socket/TCPSocket.i
+
+# target to preprocess a source file
+lib/socket/TCPSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.i
+.PHONY : lib/socket/TCPSocket.cpp.i
+
+lib/socket/TCPSocket.s: lib/socket/TCPSocket.cpp.s
+.PHONY : lib/socket/TCPSocket.s
+
+# target to generate assembly for a file
+lib/socket/TCPSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.s
+.PHONY : lib/socket/TCPSocket.cpp.s
+
+lib/thread_pool/ThreadPool.o: lib/thread_pool/ThreadPool.cpp.o
+.PHONY : lib/thread_pool/ThreadPool.o
+
+# target to build an object file
+lib/thread_pool/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o
+.PHONY : lib/thread_pool/ThreadPool.cpp.o
+
+lib/thread_pool/ThreadPool.i: lib/thread_pool/ThreadPool.cpp.i
+.PHONY : lib/thread_pool/ThreadPool.i
+
+# target to preprocess a source file
+lib/thread_pool/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.i
+.PHONY : lib/thread_pool/ThreadPool.cpp.i
+
+lib/thread_pool/ThreadPool.s: lib/thread_pool/ThreadPool.cpp.s
+.PHONY : lib/thread_pool/ThreadPool.s
+
+# target to generate assembly for a file
+lib/thread_pool/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.s
+.PHONY : lib/thread_pool/ThreadPool.cpp.s
+
+lib/user/Room.o: lib/user/Room.cpp.o
+.PHONY : lib/user/Room.o
+
+# target to build an object file
+lib/user/Room.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/Room.cpp.o
+.PHONY : lib/user/Room.cpp.o
+
+lib/user/Room.i: lib/user/Room.cpp.i
+.PHONY : lib/user/Room.i
+
+# target to preprocess a source file
+lib/user/Room.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/Room.cpp.i
+.PHONY : lib/user/Room.cpp.i
+
+lib/user/Room.s: lib/user/Room.cpp.s
+.PHONY : lib/user/Room.s
+
+# target to generate assembly for a file
+lib/user/Room.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/Room.cpp.s
+.PHONY : lib/user/Room.cpp.s
+
+lib/user/User.o: lib/user/User.cpp.o
+.PHONY : lib/user/User.o
+
+# target to build an object file
+lib/user/User.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/User.cpp.o
+.PHONY : lib/user/User.cpp.o
+
+lib/user/User.i: lib/user/User.cpp.i
+.PHONY : lib/user/User.i
+
+# target to preprocess a source file
+lib/user/User.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/User.cpp.i
+.PHONY : lib/user/User.cpp.i
+
+lib/user/User.s: lib/user/User.cpp.s
+.PHONY : lib/user/User.s
+
+# target to generate assembly for a file
+lib/user/User.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/lib/user/User.cpp.s
+.PHONY : lib/user/User.cpp.s
 
 server.o: server.cpp.o
 .PHONY : server.o
@@ -334,24 +406,33 @@ help:
 	@echo "... client"
 	@echo "... lib"
 	@echo "... server"
-	@echo "... class/command/Command.o"
-	@echo "... class/command/Command.i"
-	@echo "... class/command/Command.s"
-	@echo "... class/socket/Package.o"
-	@echo "... class/socket/Package.i"
-	@echo "... class/socket/Package.s"
-	@echo "... class/socket/TCPSocket.o"
-	@echo "... class/socket/TCPSocket.i"
-	@echo "... class/socket/TCPSocket.s"
-	@echo "... class/thread_pool/ThreadPool.o"
-	@echo "... class/thread_pool/ThreadPool.i"
-	@echo "... class/thread_pool/ThreadPool.s"
-	@echo "... class/user/User.o"
-	@echo "... class/user/User.i"
-	@echo "... class/user/User.s"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
+	@echo "... lib/Backend.o"
+	@echo "... lib/Backend.i"
+	@echo "... lib/Backend.s"
+	@echo "... lib/command/Command.o"
+	@echo "... lib/command/Command.i"
+	@echo "... lib/command/Command.s"
+	@echo "... lib/socket/Message.o"
+	@echo "... lib/socket/Message.i"
+	@echo "... lib/socket/Message.s"
+	@echo "... lib/socket/Package.o"
+	@echo "... lib/socket/Package.i"
+	@echo "... lib/socket/Package.s"
+	@echo "... lib/socket/TCPSocket.o"
+	@echo "... lib/socket/TCPSocket.i"
+	@echo "... lib/socket/TCPSocket.s"
+	@echo "... lib/thread_pool/ThreadPool.o"
+	@echo "... lib/thread_pool/ThreadPool.i"
+	@echo "... lib/thread_pool/ThreadPool.s"
+	@echo "... lib/user/Room.o"
+	@echo "... lib/user/Room.i"
+	@echo "... lib/user/Room.s"
+	@echo "... lib/user/User.o"
+	@echo "... lib/user/User.i"
+	@echo "... lib/user/User.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

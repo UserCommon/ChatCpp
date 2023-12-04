@@ -8,14 +8,15 @@
 // Предоставляет Handler'ы удобные...
 class Backend {
   public:
-    Backend();           // Create instance
-    static void start(); // Start socket and other stuff
+    Backend(const std::string &addr, int port); // Create instance
+    static void start(const std::string &addr,
+                      int port); // Start socket and other stuff
     void addRoom(Room room);
     void enterRoom(const std::string &room, User user);
     void removeRoom(const std::string &room);
     void addUser(User user);
     void stop();
-    void handleMessage(Message &&msg, User &user);
+    void handleMessage(Message msg, User user, ClientData data);
 
   private:
     std::vector<Room> m_rooms;

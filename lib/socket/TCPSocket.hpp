@@ -1,6 +1,7 @@
 #ifndef SOCKETINIT
 #define SOCKETINIT
 
+#include "Message.hpp"
 #include "Package.hpp"
 #include <arpa/inet.h>
 #include <iostream>
@@ -22,6 +23,8 @@ class TCPSocket {
     TCPSocket();
     bool connect(const std::string &address, int port);
     void send(const void *buf, size_t len);
+    void sendMessage(Message m);
+    Message recvMessage();
     void receive(void *buf, size_t len);
     void close();
 

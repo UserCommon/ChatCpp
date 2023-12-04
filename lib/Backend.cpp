@@ -1,21 +1,23 @@
 #include "Backend.hpp"
 #include "socket/TCPSocket.hpp"
 #include <algorithm>
+#include <format>
 #include <iostream>
 #include <iterator>
 #include <sstream>
 #include <sys/socket.h>
 #define MAX_USERS 256
 
-Backend::Backend() {
+Backend::Backend(const std::string &addr, int port) {
     this->m_socket = TCPServer();
+    this->m_socket.connect(addr, port);
     this->m_rooms = std::vector<Room>();
     this->m_users = std::set<User>();
 }
 
-void Backend::start() {
+void Backend::start(const std::string &addr, int port) {
     std::cout << "Starting backend..." << std::endl;
-    Backend instance;
+    Backend instance = Backend(addr, port);
 
     std::cout << "Started successfully!" << std::endl;
     instance.m_socket.listen(MAX_USERS);
@@ -33,15 +35,14 @@ void Backend::start() {
                     data.new_socket); // Message should exists but there it
                                       // cant? Client! Use emptyness
                 // TODO: Validate step
-                User user(got.getData());
 
                 while (true) { // make async without loop?
                     // Get user!
                     Message got = Message::readFrom(data.new_socket);
 
-                    instance.handleMessage(
-                        std::move(got),
-                        user); // this what we can throw to our ThreadPool
+                    instance.handleMessage(got, User(got.getSender()),
+                                           data); // this what we can throw to
+                                                  // our ThreadPool
                 }
             }
         }
@@ -60,7 +61,7 @@ std::vector<std::string> splitString(const std::string &input) {
     return result;
 }
 
-void Backend::handleMessage(Message &&msg, User &user) {
+void Backend::handleMessage(Message msg, User user, ClientData data) {
     std::string str_msg = msg.getData();
     if (str_msg.at(0) == '/') {
         // Command
@@ -70,7 +71,8 @@ void Backend::handleMessage(Message &&msg, User &user) {
         } else if (command_vector[0] == "/enterRoom") {
             enterRoom(command_vector[1], user);
         } else if (command_vector[0] == "/test") {
-            Message("server", "Hello, u wrote /test!");
+            Message("server", std::format("Hello, {}, u wrote /test!",
+                                          user.getNickname()));
         }
     } else {
     }

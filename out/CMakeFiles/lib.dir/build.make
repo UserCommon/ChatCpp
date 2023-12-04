@@ -69,95 +69,143 @@ include CMakeFiles/lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lib.dir/flags.make
 
-CMakeFiles/lib.dir/class/command/Command.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/class/command/Command.cpp.o: /home/usercommon/ChatCpp/class/command/Command.cpp
-CMakeFiles/lib.dir/class/command/Command.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lib.dir/class/command/Command.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/class/command/Command.cpp.o -MF CMakeFiles/lib.dir/class/command/Command.cpp.o.d -o CMakeFiles/lib.dir/class/command/Command.cpp.o -c /home/usercommon/ChatCpp/class/command/Command.cpp
+CMakeFiles/lib.dir/lib/Backend.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/Backend.cpp.o: /home/usercommon/ChatCpp/lib/Backend.cpp
+CMakeFiles/lib.dir/lib/Backend.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lib.dir/lib/Backend.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/Backend.cpp.o -MF CMakeFiles/lib.dir/lib/Backend.cpp.o.d -o CMakeFiles/lib.dir/lib/Backend.cpp.o -c /home/usercommon/ChatCpp/lib/Backend.cpp
 
-CMakeFiles/lib.dir/class/command/Command.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/class/command/Command.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/class/command/Command.cpp > CMakeFiles/lib.dir/class/command/Command.cpp.i
+CMakeFiles/lib.dir/lib/Backend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/Backend.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/Backend.cpp > CMakeFiles/lib.dir/lib/Backend.cpp.i
 
-CMakeFiles/lib.dir/class/command/Command.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/class/command/Command.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/class/command/Command.cpp -o CMakeFiles/lib.dir/class/command/Command.cpp.s
+CMakeFiles/lib.dir/lib/Backend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/Backend.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/Backend.cpp -o CMakeFiles/lib.dir/lib/Backend.cpp.s
 
-CMakeFiles/lib.dir/class/socket/Package.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/class/socket/Package.cpp.o: /home/usercommon/ChatCpp/class/socket/Package.cpp
-CMakeFiles/lib.dir/class/socket/Package.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lib.dir/class/socket/Package.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/class/socket/Package.cpp.o -MF CMakeFiles/lib.dir/class/socket/Package.cpp.o.d -o CMakeFiles/lib.dir/class/socket/Package.cpp.o -c /home/usercommon/ChatCpp/class/socket/Package.cpp
+CMakeFiles/lib.dir/lib/command/Command.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/command/Command.cpp.o: /home/usercommon/ChatCpp/lib/command/Command.cpp
+CMakeFiles/lib.dir/lib/command/Command.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lib.dir/lib/command/Command.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/command/Command.cpp.o -MF CMakeFiles/lib.dir/lib/command/Command.cpp.o.d -o CMakeFiles/lib.dir/lib/command/Command.cpp.o -c /home/usercommon/ChatCpp/lib/command/Command.cpp
 
-CMakeFiles/lib.dir/class/socket/Package.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/class/socket/Package.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/class/socket/Package.cpp > CMakeFiles/lib.dir/class/socket/Package.cpp.i
+CMakeFiles/lib.dir/lib/command/Command.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/command/Command.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/command/Command.cpp > CMakeFiles/lib.dir/lib/command/Command.cpp.i
 
-CMakeFiles/lib.dir/class/socket/Package.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/class/socket/Package.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/class/socket/Package.cpp -o CMakeFiles/lib.dir/class/socket/Package.cpp.s
+CMakeFiles/lib.dir/lib/command/Command.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/command/Command.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/command/Command.cpp -o CMakeFiles/lib.dir/lib/command/Command.cpp.s
 
-CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o: /home/usercommon/ChatCpp/class/socket/TCPSocket.cpp
-CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o -MF CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o.d -o CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o -c /home/usercommon/ChatCpp/class/socket/TCPSocket.cpp
+CMakeFiles/lib.dir/lib/socket/Message.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/socket/Message.cpp.o: /home/usercommon/ChatCpp/lib/socket/Message.cpp
+CMakeFiles/lib.dir/lib/socket/Message.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lib.dir/lib/socket/Message.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/socket/Message.cpp.o -MF CMakeFiles/lib.dir/lib/socket/Message.cpp.o.d -o CMakeFiles/lib.dir/lib/socket/Message.cpp.o -c /home/usercommon/ChatCpp/lib/socket/Message.cpp
 
-CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/class/socket/TCPSocket.cpp > CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.i
+CMakeFiles/lib.dir/lib/socket/Message.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/socket/Message.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/socket/Message.cpp > CMakeFiles/lib.dir/lib/socket/Message.cpp.i
 
-CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/class/socket/TCPSocket.cpp -o CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.s
+CMakeFiles/lib.dir/lib/socket/Message.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/socket/Message.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/socket/Message.cpp -o CMakeFiles/lib.dir/lib/socket/Message.cpp.s
 
-CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o: /home/usercommon/ChatCpp/class/thread_pool/ThreadPool.cpp
-CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o -MF CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o.d -o CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o -c /home/usercommon/ChatCpp/class/thread_pool/ThreadPool.cpp
+CMakeFiles/lib.dir/lib/socket/Package.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/socket/Package.cpp.o: /home/usercommon/ChatCpp/lib/socket/Package.cpp
+CMakeFiles/lib.dir/lib/socket/Package.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lib.dir/lib/socket/Package.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/socket/Package.cpp.o -MF CMakeFiles/lib.dir/lib/socket/Package.cpp.o.d -o CMakeFiles/lib.dir/lib/socket/Package.cpp.o -c /home/usercommon/ChatCpp/lib/socket/Package.cpp
 
-CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/class/thread_pool/ThreadPool.cpp > CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.i
+CMakeFiles/lib.dir/lib/socket/Package.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/socket/Package.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/socket/Package.cpp > CMakeFiles/lib.dir/lib/socket/Package.cpp.i
 
-CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/class/thread_pool/ThreadPool.cpp -o CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.s
+CMakeFiles/lib.dir/lib/socket/Package.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/socket/Package.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/socket/Package.cpp -o CMakeFiles/lib.dir/lib/socket/Package.cpp.s
 
-CMakeFiles/lib.dir/class/user/User.cpp.o: CMakeFiles/lib.dir/flags.make
-CMakeFiles/lib.dir/class/user/User.cpp.o: /home/usercommon/ChatCpp/class/user/User.cpp
-CMakeFiles/lib.dir/class/user/User.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lib.dir/class/user/User.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/class/user/User.cpp.o -MF CMakeFiles/lib.dir/class/user/User.cpp.o.d -o CMakeFiles/lib.dir/class/user/User.cpp.o -c /home/usercommon/ChatCpp/class/user/User.cpp
+CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o: /home/usercommon/ChatCpp/lib/socket/TCPSocket.cpp
+CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o -MF CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o.d -o CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o -c /home/usercommon/ChatCpp/lib/socket/TCPSocket.cpp
 
-CMakeFiles/lib.dir/class/user/User.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/class/user/User.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/class/user/User.cpp > CMakeFiles/lib.dir/class/user/User.cpp.i
+CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/socket/TCPSocket.cpp > CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.i
 
-CMakeFiles/lib.dir/class/user/User.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/class/user/User.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/class/user/User.cpp -o CMakeFiles/lib.dir/class/user/User.cpp.s
+CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/socket/TCPSocket.cpp -o CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.s
+
+CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o: /home/usercommon/ChatCpp/lib/thread_pool/ThreadPool.cpp
+CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o -MF CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o.d -o CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o -c /home/usercommon/ChatCpp/lib/thread_pool/ThreadPool.cpp
+
+CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/thread_pool/ThreadPool.cpp > CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.i
+
+CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/thread_pool/ThreadPool.cpp -o CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.s
+
+CMakeFiles/lib.dir/lib/user/Room.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/user/Room.cpp.o: /home/usercommon/ChatCpp/lib/user/Room.cpp
+CMakeFiles/lib.dir/lib/user/Room.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lib.dir/lib/user/Room.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/user/Room.cpp.o -MF CMakeFiles/lib.dir/lib/user/Room.cpp.o.d -o CMakeFiles/lib.dir/lib/user/Room.cpp.o -c /home/usercommon/ChatCpp/lib/user/Room.cpp
+
+CMakeFiles/lib.dir/lib/user/Room.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/user/Room.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/user/Room.cpp > CMakeFiles/lib.dir/lib/user/Room.cpp.i
+
+CMakeFiles/lib.dir/lib/user/Room.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/user/Room.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/user/Room.cpp -o CMakeFiles/lib.dir/lib/user/Room.cpp.s
+
+CMakeFiles/lib.dir/lib/user/User.cpp.o: CMakeFiles/lib.dir/flags.make
+CMakeFiles/lib.dir/lib/user/User.cpp.o: /home/usercommon/ChatCpp/lib/user/User.cpp
+CMakeFiles/lib.dir/lib/user/User.cpp.o: CMakeFiles/lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lib.dir/lib/user/User.cpp.o"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lib.dir/lib/user/User.cpp.o -MF CMakeFiles/lib.dir/lib/user/User.cpp.o.d -o CMakeFiles/lib.dir/lib/user/User.cpp.o -c /home/usercommon/ChatCpp/lib/user/User.cpp
+
+CMakeFiles/lib.dir/lib/user/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lib.dir/lib/user/User.cpp.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usercommon/ChatCpp/lib/user/User.cpp > CMakeFiles/lib.dir/lib/user/User.cpp.i
+
+CMakeFiles/lib.dir/lib/user/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lib.dir/lib/user/User.cpp.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usercommon/ChatCpp/lib/user/User.cpp -o CMakeFiles/lib.dir/lib/user/User.cpp.s
 
 # Object files for target lib
 lib_OBJECTS = \
-"CMakeFiles/lib.dir/class/command/Command.cpp.o" \
-"CMakeFiles/lib.dir/class/socket/Package.cpp.o" \
-"CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o" \
-"CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o" \
-"CMakeFiles/lib.dir/class/user/User.cpp.o"
+"CMakeFiles/lib.dir/lib/Backend.cpp.o" \
+"CMakeFiles/lib.dir/lib/command/Command.cpp.o" \
+"CMakeFiles/lib.dir/lib/socket/Message.cpp.o" \
+"CMakeFiles/lib.dir/lib/socket/Package.cpp.o" \
+"CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o" \
+"CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o" \
+"CMakeFiles/lib.dir/lib/user/Room.cpp.o" \
+"CMakeFiles/lib.dir/lib/user/User.cpp.o"
 
 # External object files for target lib
 lib_EXTERNAL_OBJECTS =
 
-liblib.a: CMakeFiles/lib.dir/class/command/Command.cpp.o
-liblib.a: CMakeFiles/lib.dir/class/socket/Package.cpp.o
-liblib.a: CMakeFiles/lib.dir/class/socket/TCPSocket.cpp.o
-liblib.a: CMakeFiles/lib.dir/class/thread_pool/ThreadPool.cpp.o
-liblib.a: CMakeFiles/lib.dir/class/user/User.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/Backend.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/command/Command.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/socket/Message.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/socket/Package.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/user/Room.cpp.o
+liblib.a: CMakeFiles/lib.dir/lib/user/User.cpp.o
 liblib.a: CMakeFiles/lib.dir/build.make
 liblib.a: CMakeFiles/lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library liblib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usercommon/ChatCpp/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library liblib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lib.dir/link.txt --verbose=$(VERBOSE)
 

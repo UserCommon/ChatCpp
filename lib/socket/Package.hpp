@@ -11,7 +11,7 @@ class Package {
     // readFrom
     uint32_t size;
 
-    Package(T &&data, uint32_t size);
+    Package(T data, uint32_t size);
     Package();
 
     T getData();

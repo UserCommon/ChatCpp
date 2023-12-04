@@ -1,6 +1,6 @@
 #include "User.hpp"
 
-User::User() {}
+User::User() : m_nickname("Unauthorized") {}
 
 User::User(std::string &&nickname) : m_nickname(nickname) {}
 
