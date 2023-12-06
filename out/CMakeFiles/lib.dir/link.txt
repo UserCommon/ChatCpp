@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblib.a CMakeFiles/lib.dir/lib/Backend.cpp.o CMakeFiles/lib.dir/lib/command/Command.cpp.o CMakeFiles/lib.dir/lib/socket/Message.cpp.o CMakeFiles/lib.dir/lib/socket/Package.cpp.o CMakeFiles/lib.dir/lib/socket/TCPSocket.cpp.o CMakeFiles/lib.dir/lib/thread_pool/ThreadPool.cpp.o CMakeFiles/lib.dir/lib/user/Room.cpp.o CMakeFiles/lib.dir/lib/user/User.cpp.o
-/usr/bin/ranlib liblib.a

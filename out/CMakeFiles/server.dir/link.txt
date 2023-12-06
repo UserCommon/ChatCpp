@@ -1,1 +1,1 @@
-clang++ -rdynamic CMakeFiles/server.dir/server.cpp.o -o server  liblib.a 
+/usr/bin/clang++ -rdynamic CMakeFiles/server.dir/server.cpp.o CMakeFiles/server.dir/Backend.cpp.o -o server  include/libinclude.a 

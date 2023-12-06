@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinclude.a CMakeFiles/include.dir/command/Command.cpp.o CMakeFiles/include.dir/socket/Message.cpp.o CMakeFiles/include.dir/socket/Package.cpp.o CMakeFiles/include.dir/socket/TCPSocket.cpp.o CMakeFiles/include.dir/thread_pool/ThreadPool.cpp.o CMakeFiles/include.dir/user/Room.cpp.o CMakeFiles/include.dir/user/User.cpp.o
+/usr/bin/ranlib libinclude.a
