@@ -14,7 +14,8 @@
 #include <sys/socket.h>
 #include <thread>
 #include <unordered_map>
-#define MAX_USERS 256
+#include <variant>
+#define MAX_USERS 10
 
 struct UserHash {
     std::size_t operator()(const User &u) const {
@@ -22,11 +23,10 @@ struct UserHash {
     }
 };
 
-struct UserEqual {
-    bool operator()(const User &u1, const User &u2) const {
-        return u1.getNickname() == u2.getNickname();
-    }
-};
+bool NicknameEquality::operator()(const std::string &u1,
+                                  const std::string &u2) const {
+    return (std::strcmp(u1.c_str(), u2.c_str()) == 0);
+}
 
 Backend::Backend(const std::string &addr, int port) {
     this->m_socket = TCPServer();
@@ -59,10 +59,11 @@ void Backend::start(const std::string &addr, int port) {
                         data.new_socket); // Message should exists but there it
                                           // cant? Client! Use emptyness
                     // TODO: Validate step
-                    std::cout << "New user: " << got.getMessage() << std::endl;
                     User user = User(got.getMessage());
                     instance.addUser(user, data);
-                    std::cout.flush();
+                    instance.printMap();
+                    std::cout << instance.getUserSocket(user.getNickname())
+                              << std::endl;
 
                     while (true) { // make async without loop?
                         // Get user!
@@ -77,10 +78,13 @@ void Backend::start(const std::string &addr, int port) {
                     }
                 }
             } catch (std::out_of_range) {
+                std::cout << "OUT OF RANGE" << std::endl;
             }
         }).detach();
     }
 }
+
+// Отправлять всем пользователям кроме себя
 
 std::vector<std::string> ssplitString(const std::string &input) {
     std::vector<std::string> result;
@@ -97,32 +101,72 @@ std::vector<std::string> ssplitString(const std::string &input) {
 void Backend::handleMessage(Message msg, User user, ClientData data) {
     std::string str_msg = msg.getMessage();
     if (str_msg.at(0) == '/') {
-        // Command
         std::vector<std::string> command_vector = ssplitString(str_msg);
-        // if (command_vector[0] == "/createRoom") {
-        //     addRoom(Room(command_vector[1]));
-        // } else if (command_vector[0] == "/enterRoom") {
-        //     enterRoom(command_vector[1], user);
-        // }
-        const char *s = command_vector[0].c_str();
-        for (int i = 0; i < std::strlen(s); i++) {
-            std::cout << ((int)s[i]) << " ";
-        }
+
         std::cout << std::endl;
         if (std::strcmp(command_vector[0].c_str(), "/test") == 0) {
             Message("server", "Hello, " + user.getNickname())
                 .writeTo(data.new_socket);
+        } else if (std::strcmp(command_vector[0].c_str(), "/tell") == 0) {
+            if (command_vector.size() >= 3) {
+                std::stringstream s;
+                for (int i = 2; i < command_vector.size(); i++) {
+                    s << command_vector[i] << " ";
+                }
+                Message m(user.getNickname(), s.str());
+                m.writeTo(getUserSocket(command_vector[1]));
+                std::cout << m.getSender() << " | " << m.getMessage()
+                          << std::endl;
+                std::cout.flush();
+            } else {
+                Message("server", "Illegal command argument! /tell has only 2 "
+                                  "arguments 1: reciever 2: Message itself")
+                    .writeTo(data.new_socket);
+            }
+
         } else {
             Message("server", "Unknown command: " + msg.getMessage())
                 .writeTo(data.new_socket);
         }
+
+        std::cout << "debug parser" << std::endl;
+        for (int i = 0; i < command_vector.size(); i++) {
+            std::cout << i << ": " << command_vector[i] << " | ";
+        }
+        std::cout << std::endl;
     } else {
-        for (const auto &user_loop : m_usermap)
-            Message(user.getNickname() + ": ", msg.getMessage())
-                .writeTo(user_loop.second.new_socket);
+        for (const auto &user_loop : m_usermap) {
+            if (user_loop.second.new_socket !=
+                data.new_socket) { // Fixed, Probably buggy
+                Message(user.getNickname(), msg.getMessage())
+                    .writeTo(user_loop.second.new_socket);
+            }
+        }
         std::cout << "Got message: " << user.getNickname() << ": "
                   << msg.getMessage() << std::endl;
     }
+}
+
+int Backend::getUserSocket(const std::string &name) {
+    printMap();
+    std::lock_guard<std::mutex> guard(m_mutex);
+
+    // for (const auto &user_loop : m_usermap) {
+    //     if (std::strcmp(user_loop.first.c_str(), name.c_str()) == 0) {
+    //         std::cout << "HEY" << std::endl;
+    //         return user_loop.second.new_socket;
+    //     }
+    // }
+    return m_usermap.at(name).new_socket;
+}
+
+void Backend::printMap() {
+    std::lock_guard<std::mutex> guard(m_mutex);
+    for (const auto &user_loop : m_usermap) {
+        std::cout << "User: " << user_loop.first
+                  << " Socket: " << user_loop.second.new_socket << std::endl;
+    }
+    std::cout.flush();
 }
 
 void Backend::addUser(const User &user, ClientData data) {

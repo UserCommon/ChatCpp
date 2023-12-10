@@ -8,6 +8,9 @@
 #include <unordered_map>
 #include <vector>
 
+struct NicknameEquality {
+    bool operator()(const std::string &u1, const std::string &u2) const;
+};
 // Предоставляет Handler'ы удобные...
 class Backend {
   public:
@@ -21,10 +24,14 @@ class Backend {
     void removeUser(const User &user);
     void stop();
     void handleMessage(Message msg, User user, ClientData data);
+    void printMap();
+    int getUserSocket(const std::string &name);
 
   private:
     // std::vector<Room> m_rooms;
-    std::unordered_map<std::string, ClientData> m_usermap;
+    std::unordered_map<std::string, ClientData, std::hash<std::string>,
+                       NicknameEquality>
+        m_usermap;
     TCPServer m_socket;
     std::mutex m_mutex;
 };

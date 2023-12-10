@@ -18,33 +18,6 @@ Message inputMessage(const std::string &nickname) {
     return Message(nickname, msg);
 }
 
-void sendMessageAsync(const std::string &userName, Client &client) {
-    while (true) {
-        auto start = std::chrono::steady_clock::now(); // Record the start time
-        Message msg = inputMessage(userName);
-        client.sendMessage(msg);
-        auto end = std::chrono::steady_clock::now(); // Record the end time
-        std::chrono::duration<double> elapsed_seconds =
-            end - start; // Calculate the elapsed time
-        if (elapsed_seconds <
-            std::chrono::milliseconds(
-                100)) { // Limit the rate to 10 messages per second
-            std::this_thread::sleep_for(
-                std::chrono::milliseconds(100) -
-                elapsed_seconds); // Wait to maintain the rate
-        }
-    }
-}
-
-void receiveMessageAsync(Client &client) {
-    while (true) {
-        Message response = client.recvMessage();
-        std::cout << response.getSender() << " " << response.getMessage()
-                  << std::endl;
-        std::cout.flush();
-    }
-}
-
 int main(int argc, char **argv) {
     if (argc < 3) {
         std::cout << "Need to have hostname and port" << std::endl;
@@ -71,7 +44,7 @@ int main(int argc, char **argv) {
     auto receiveFuture = std::async(std::launch::async, [&]() {
         while (true) {
             Message response = client.recvMessage();
-            std::cout << response.getSender() << " " << response.getMessage()
+            std::cout << response.getSender() << ": " << response.getMessage()
                       << std::endl;
             std::cout.flush();
         }
