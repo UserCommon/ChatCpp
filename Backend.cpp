@@ -4,7 +4,8 @@
 #include "include/thread_pool/ThreadPool.hpp"
 #include "include/user/User.hpp"
 #include <algorithm>
-#define threads_c 2
+#include <exception>
+#define threads_c 4
 
 #include <atomic>
 #include <cstring>
@@ -51,9 +52,11 @@ void Backend::start(const std::string &addr, int port) {
     instance.m_socket.listen(MAX_USERS);
     std::cout << "Started successfully!" << std::endl;
     std::cout << instance.m_socket.socket_fd << std::endl;
+    std::atomic<int> cnt = 0;
     while (true) {
-        if (a < threads_c) {
-            a++;
+        if (cnt < threads_c) {
+            cnt++;
+            std::cout << "Thread #" << cnt << std::endl;
             // Here is threadPool needed!
             pool.QueueJob([&]() {
                 try {
@@ -80,33 +83,35 @@ void Backend::start(const std::string &addr, int port) {
                         instance.printMap();
                         std::cout << instance.getUserSocket(user.getNickname())
                                   << std::endl;
-                        bool connected = true;
+                        // bool connected = true;
 
-                        while (connected) { // make async without loop?
+                        while (true) { // make async without loop?
                             // Get user!
                             Message got = Message::readFrom(data.new_socket);
-                            if (std::strcmp(got.getSender().c_str(),
-                                            "server") == 0 &&
-                                std::strcmp(got.getMessage().c_str(),
-                                            "disconnection_error") == 0) {
-                                return;
-                            }
+
                             std::cout << "Message from " << got.getSender()
                                       << " | " << got.getMessage() << std::endl;
                             std::cout.flush();
+
+                            if (std::strcmp(got.getMessage().c_str(),
+                                            "/exit") == 0) {
+                                instance.removeUser(got.getSender());
+                                break;
+                            }
 
                             instance.handleMessage(
                                 got, User(got.getSender()),
                                 data); // this what we can throw
                                        // to our ThreadPool
+                                       //
                         }
-                        a--;
-                        std::cout << a << std::endl;
                         std::cout.flush();
                     }
                 } catch (std::out_of_range) {
                     std::cout << "OUT OF RANGE" << std::endl;
                 }
+                cnt--;
+                std::cout << "somebody disconnected: " << cnt << std::endl;
             });
         }
     }
@@ -164,9 +169,8 @@ void Backend::handleMessage(Message msg, User user, ClientData data) {
         }
         std::cout << std::endl;
     } else {
-        if ((std::strcmp(msg.getSender().c_str(), "server") == 0) &&
-            (std::strcmp(msg.getMessage().c_str(), "disconnection_error") ==
-             0)) {
+        if (!msg.isValid()) {
+            std::cout << "YEAH" << std::endl;
             return;
         }
 

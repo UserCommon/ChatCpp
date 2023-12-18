@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/usercommon/ChatCpp/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/server.dir/server.cpp.o -c /home/usercommon/ChatCpp/server.cpp",
+  "file": "/home/usercommon/ChatCpp/server.cpp",
+  "output": "CMakeFiles/server.dir/server.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/server.dir/Backend.cpp.o -c /home/usercommon/ChatCpp/Backend.cpp",
+  "file": "/home/usercommon/ChatCpp/Backend.cpp",
+  "output": "CMakeFiles/server.dir/Backend.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/client.dir/client.cpp.o -c /home/usercommon/ChatCpp/client.cpp",
+  "file": "/home/usercommon/ChatCpp/client.cpp",
+  "output": "CMakeFiles/client.dir/client.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/command/Command.cpp.o -c /home/usercommon/ChatCpp/include/command/Command.cpp",
+  "file": "/home/usercommon/ChatCpp/include/command/Command.cpp",
+  "output": "include/CMakeFiles/include.dir/command/Command.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/socket/Message.cpp.o -c /home/usercommon/ChatCpp/include/socket/Message.cpp",
+  "file": "/home/usercommon/ChatCpp/include/socket/Message.cpp",
+  "output": "include/CMakeFiles/include.dir/socket/Message.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/socket/Package.cpp.o -c /home/usercommon/ChatCpp/include/socket/Package.cpp",
+  "file": "/home/usercommon/ChatCpp/include/socket/Package.cpp",
+  "output": "include/CMakeFiles/include.dir/socket/Package.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/socket/TCPSocket.cpp.o -c /home/usercommon/ChatCpp/include/socket/TCPSocket.cpp",
+  "file": "/home/usercommon/ChatCpp/include/socket/TCPSocket.cpp",
+  "output": "include/CMakeFiles/include.dir/socket/TCPSocket.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/thread_pool/ThreadPool.cpp.o -c /home/usercommon/ChatCpp/include/thread_pool/ThreadPool.cpp",
+  "file": "/home/usercommon/ChatCpp/include/thread_pool/ThreadPool.cpp",
+  "output": "include/CMakeFiles/include.dir/thread_pool/ThreadPool.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/user/Room.cpp.o -c /home/usercommon/ChatCpp/include/user/Room.cpp",
+  "file": "/home/usercommon/ChatCpp/include/user/Room.cpp",
+  "output": "include/CMakeFiles/include.dir/user/Room.cpp.o"
+},
+{
+  "directory": "/home/usercommon/ChatCpp/build/include",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -o CMakeFiles/include.dir/user/User.cpp.o -c /home/usercommon/ChatCpp/include/user/User.cpp",
+  "file": "/home/usercommon/ChatCpp/include/user/User.cpp",
+  "output": "include/CMakeFiles/include.dir/user/User.cpp.o"
+}
+]

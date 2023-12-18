@@ -33,7 +33,7 @@ Message Message::readFrom(int fd) {
     int length = 0;
 
     if (::read(fd, &length, sizeof(length)) <= 0) {
-        std::cerr << "failed to read length" << std::endl;
+        // std::cerr << "failed to read length" << std::endl; <- bugged
         return Message("server", "disconnection_error");
     }
     char buff[length];
@@ -58,6 +58,10 @@ void Message::writeTo(int fd) {
 
 bool Message::isValid() {
     // Check if the sender and message are not empty
+    if ((std::strcmp(m_sender.c_str(), "server") == 0) &&
+        (std::strcmp(m_message.c_str(), "disconnection_error") == 0)) {
+        return false;
+    }
     if (m_sender.empty() || m_message.empty()) {
         return false;
     }

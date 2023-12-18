@@ -118,6 +118,7 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
   /usr/include/c++/13.2.1/cstdint \
   /usr/include/c++/13.2.1/cstdio \
   /usr/include/c++/13.2.1/cstdlib \
+  /usr/include/c++/13.2.1/cstring \
   /usr/include/c++/13.2.1/ctime \
   /usr/include/c++/13.2.1/cwchar \
   /usr/include/c++/13.2.1/cwctype \
@@ -294,6 +295,8 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -374,9 +377,7 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 
 /usr/include/bits/types/time_t.h:
 
-/usr/include/c++/13.2.1/ext/concurrence.h:
-
-/usr/include/bits/getopt_core.h:
+/usr/include/bits/types/struct_tm.h:
 
 /usr/include/c++/13.2.1/ext/atomicity.h:
 
@@ -391,6 +392,14 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 /usr/include/c++/13.2.1/optional:
 
 /usr/include/c++/13.2.1/bits/ptr_traits.h:
+
+/usr/include/c++/13.2.1/cstring:
+
+/usr/include/c++/13.2.1/bits/std_abs.h:
+
+/usr/include/c++/13.2.1/bits/std_mutex.h:
+
+/usr/include/c++/13.2.1/bits/vector.tcc:
 
 /usr/include/c++/13.2.1/istream:
 
@@ -463,12 +472,6 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 /usr/include/sys/types.h:
 
 /usr/include/c++/13.2.1/cwchar:
-
-/usr/include/c++/13.2.1/bits/std_abs.h:
-
-/usr/include/c++/13.2.1/bits/std_mutex.h:
-
-/usr/include/c++/13.2.1/bits/vector.tcc:
 
 /usr/include/c++/13.2.1/bits/shared_ptr_base.h:
 
@@ -666,8 +669,6 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 
 /usr/include/c++/13.2.1/bits/unique_lock.h:
 
-/usr/include/bits/types/struct_tm.h:
-
 /usr/include/c++/13.2.1/bits/ostream_insert.h:
 
 /usr/include/c++/13.2.1/string:
@@ -726,6 +727,10 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 
 /usr/include/asm/unistd.h:
 
+/usr/include/c++/13.2.1/ext/concurrence.h:
+
+/usr/include/bits/getopt_core.h:
+
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
@@ -749,6 +754,8 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 /usr/include/c++/13.2.1/locale:
 
 /usr/include/c++/13.2.1/new:
+
+/usr/include/strings.h:
 
 /usr/include/c++/13.2.1/numbers:
 
@@ -881,6 +888,8 @@ CMakeFiles/client.dir/client.cpp.o: /home/usercommon/ChatCpp/client.cpp \
 /usr/include/c++/13.2.1/bits/codecvt.h:
 
 /usr/include/bits/socket.h:
+
+/usr/include/string.h:
 
 /usr/include/bits/socket_type.h:
 

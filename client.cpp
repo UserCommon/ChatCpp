@@ -3,6 +3,7 @@
 #include "include/user/User.hpp"
 #include <chrono>
 #include <cstdlib>
+#include <cstring>
 #include <future>
 #include <iostream>
 #include <string>
@@ -37,6 +38,10 @@ int main(int argc, char **argv) {
         while (true) {
             Message msg = inputMessage(user.getNickname());
             client.sendMessage(msg);
+            if (std::strcmp(msg.getMessage().c_str(), "/exit") == 0) {
+                exit(0);
+            }
+
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }
     });
@@ -44,9 +49,17 @@ int main(int argc, char **argv) {
     auto receiveFuture = std::async(std::launch::async, [&]() {
         while (true) {
             Message response = client.recvMessage();
-            std::cout << response.getSender() << ": " << response.getMessage()
-                      << std::endl;
-            std::cout.flush();
+            if (response.isValid()) {
+
+                // if ((std::strcmp(response.getSender().c_str(), "server") ==
+                //      0) &&
+                //     (std::strcmp(response.getSender().c_str(), "exit") == 0))
+                //     { break;
+                // }
+                std::cout << response.getSender() << ": "
+                          << response.getMessage() << std::endl;
+                std::cout.flush();
+            }
         }
     });
     // std::chrono::milliseconds timeout(50);
