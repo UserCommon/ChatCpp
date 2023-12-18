@@ -1,6 +1,10 @@
 #ifndef THREADPOOL_INIT
 #define THREADPOOL_INIT
+#include <condition_variable>
 #include <functional>
+#include <mutex>
+#include <queue>
+#include <thread>
 
 class ThreadPool {
   public:

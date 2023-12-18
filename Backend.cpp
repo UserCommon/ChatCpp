@@ -1,7 +1,12 @@
 #include "Backend.hpp"
+#include "csignal"
 #include "include/socket/TCPSocket.hpp"
+#include "include/thread_pool/ThreadPool.hpp"
 #include "include/user/User.hpp"
 #include <algorithm>
+#define threads_c 2
+
+#include <atomic>
 #include <cstring>
 #include <format>
 #include <functional>
@@ -36,6 +41,10 @@ Backend::Backend(const std::string &addr, int port) {
 }
 
 void Backend::start(const std::string &addr, int port) {
+    std::atomic<int> a;
+    ThreadPool pool;
+    pool.Start();
+
     std::cout << "Starting backend..." << std::endl;
     Backend instance = Backend(addr, port);
 
@@ -43,45 +52,65 @@ void Backend::start(const std::string &addr, int port) {
     std::cout << "Started successfully!" << std::endl;
     std::cout << instance.m_socket.socket_fd << std::endl;
     while (true) {
-        // Here is threadPool needed!
-        std::thread([&]() {
-            try {
-                ClientData data = instance.m_socket.accept();
-                if (!data.isValid()) {
-                    // std::cerr << "Can't accept user: " << data.new_socket
-                    //           << std::endl;
-                } else {
-                    std::cout << "Got client!" << std::endl;
+        if (a < threads_c) {
+            a++;
+            // Here is threadPool needed!
+            pool.QueueJob([&]() {
+                try {
+                    ClientData data = instance.m_socket.accept();
+                    if (!data.isValid()) {
+                        return;
+                    } else {
+                        std::cout << "Got client!" << std::endl;
 
-                    Message m("server", "Enter your nick name:");
-                    m.writeTo(data.new_socket);
-                    Message got = Message::readFrom(
-                        data.new_socket); // Message should exists but there it
-                                          // cant? Client! Use emptyness
-                    // TODO: Validate step
-                    User user = User(got.getMessage());
-                    instance.addUser(user, data);
-                    instance.printMap();
-                    std::cout << instance.getUserSocket(user.getNickname())
-                              << std::endl;
+                        Message m("server", "Enter your nick name:");
+                        m.writeTo(data.new_socket);
+                        Message got = Message::readFrom(
+                            data.new_socket); // Message should exists but there
+                                              // it cant? Client! Use emptyness
+                        if (std::strcmp(got.getSender().c_str(), "server") ==
+                                0 &&
+                            std::strcmp(got.getMessage().c_str(),
+                                        "disconnection_error") == 0) {
+                            return;
+                        }
+                        // TODO: Validate step
+                        User user = User(got.getMessage());
+                        instance.addUser(user, data);
+                        instance.printMap();
+                        std::cout << instance.getUserSocket(user.getNickname())
+                                  << std::endl;
+                        bool connected = true;
 
-                    while (true) { // make async without loop?
-                        // Get user!
-                        Message got = Message::readFrom(data.new_socket);
-                        std::cout << "Message from " << got.getSender() << " | "
-                                  << got.getMessage() << std::endl;
+                        while (connected) { // make async without loop?
+                            // Get user!
+                            Message got = Message::readFrom(data.new_socket);
+                            if (std::strcmp(got.getSender().c_str(),
+                                            "server") == 0 &&
+                                std::strcmp(got.getMessage().c_str(),
+                                            "disconnection_error") == 0) {
+                                return;
+                            }
+                            std::cout << "Message from " << got.getSender()
+                                      << " | " << got.getMessage() << std::endl;
+                            std::cout.flush();
+
+                            instance.handleMessage(
+                                got, User(got.getSender()),
+                                data); // this what we can throw
+                                       // to our ThreadPool
+                        }
+                        a--;
+                        std::cout << a << std::endl;
                         std::cout.flush();
-
-                        instance.handleMessage(got, User(got.getSender()),
-                                               data); // this what we can throw
-                                                      // to our ThreadPool
                     }
+                } catch (std::out_of_range) {
+                    std::cout << "OUT OF RANGE" << std::endl;
                 }
-            } catch (std::out_of_range) {
-                std::cout << "OUT OF RANGE" << std::endl;
-            }
-        }).detach();
+            });
+        }
     }
+    pool.Stop();
 }
 
 // Отправлять всем пользователям кроме себя
@@ -135,6 +164,12 @@ void Backend::handleMessage(Message msg, User user, ClientData data) {
         }
         std::cout << std::endl;
     } else {
+        if ((std::strcmp(msg.getSender().c_str(), "server") == 0) &&
+            (std::strcmp(msg.getMessage().c_str(), "disconnection_error") ==
+             0)) {
+            return;
+        }
+
         for (const auto &user_loop : m_usermap) {
             if (user_loop.second.new_socket !=
                 data.new_socket) { // Fixed, Probably buggy

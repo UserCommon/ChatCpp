@@ -9,6 +9,7 @@ class Message {
     Message(std::string sender, std::string message, int size);
     std::string getSender();
     int getSize();
+    bool isValid();
     std::string getMessage();
     void writeTo(int fd);
     static Message readFrom(int fd);

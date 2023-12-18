@@ -34,12 +34,13 @@ Message Message::readFrom(int fd) {
 
     if (::read(fd, &length, sizeof(length)) <= 0) {
         std::cerr << "failed to read length" << std::endl;
+        return Message("server", "disconnection_error");
     }
     char buff[length];
     for (int i = 0; i < length; i++) {
         buff[i] = 'A';
     }
-    ::read(fd, &buff, length);
+    ::read(fd, &buff, length); // segfault
 
     std::string str(buff, length);
     std::string one, two;
@@ -53,6 +54,19 @@ void Message::writeTo(int fd) {
 
     ::write(fd, &(size_n), sizeof(size_n));
     ::write(fd, response.c_str(), size_n);
+}
+
+bool Message::isValid() {
+    // Check if the sender and message are not empty
+    if (m_sender.empty() || m_message.empty()) {
+        return false;
+    }
+
+    // Additional custom validation logic if needed
+    // For example, checking if the sender and message meet certain criteria
+
+    // Return true if all checks pass
+    return true;
 }
 
 int Message::getSize() { return size; }
